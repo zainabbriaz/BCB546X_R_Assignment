@@ -1,0 +1,16 @@
+
+
+Data inspection: It was really good, you used different commands to take a look of the preliminary data. The explanation of every step that you followed it was also, really good.
+
+Data processing: Very good explanation of the steps that you did. The use of the command head() in some of the steps is a good idea to explore the file every time that you create a new one (I liked it).
+
+Visualization
+The visualization of the “SNPs per chromosome “and “SNPs in different groups” graph look very nice as well the  “Missing data and heterozygosity” graphs
+
+Problems detected
+I was not able to run the part “Heterozygosity according to SNP” almost at the end of your script I think one of the problem was that you asked to use a file called (Merged_m) but this file it was not created previously so  an error showed up “Error in merged_m[merged_m == "?/?"] = NA : object 'merged_m' not found”
+So, I was not able to observe your own visualization since the command was not able to run
+
+README FILE
+The README file, posted it in the GitHub repository is very good organized with a good description on every step.
+Also in the GitHub repository I would suggest to create subfolders of the files that you created in order to have a better order and visualization of your files, specially if you share this files with other members this could be one strategy to make your work reproducible as we saw in class.
