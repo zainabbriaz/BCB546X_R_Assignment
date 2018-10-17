@@ -154,6 +154,7 @@ ggplot(Group_count_melt,aes(x = Group, y= value, fill=variable)) + geom_bar(stat
 Visualized heterozygosity according to SNP ID usingthe same code as above with merged Fang genotype and SNP position dataframes. 
 ```{r}
 headers_m <- colnames(Fang_SNP_merged)[-c(1:3)]
+merged_m <- melt(Fang_SNP_merged, measure.vars = headers_m)
 merged_m[ merged_m == "?/?" ] = NA
 merged_m$isHomozygous <- (merged_m$value=="A/A" | merged_m$value=="C/C" | merged_m$value=="G/G" | merged_m$value=="T/T")
 merged_m_SNP <- merged_m[order(merged_m$SNP),]
@@ -162,3 +163,5 @@ SNP_hetero$Heterozygocity <- (SNP_hetero$heterozygocity_count/SNP_hetero$total_c
 SNP_hetero_melt <- melt(SNP_hetero, measure.vars = "Heterozygocity")
 ggplot(SNP_hetero_melt,aes(x = SNP_ID, y= value, fill=variable)) + geom_bar(stat = "identity", position = "stack")
 ```
+
+#### A folder called Plots was made using the dir.create() function and plot files moved to this folder using the file.move().
